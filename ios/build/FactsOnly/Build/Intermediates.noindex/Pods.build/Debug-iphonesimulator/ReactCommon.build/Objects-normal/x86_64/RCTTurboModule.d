@@ -1,0 +1,45 @@
+dependencies: \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/node_modules/react-native/ReactCommon/turbomodule/core/platform/ios/RCTTurboModule.mm \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Target\ Support\ Files/ReactCommon/ReactCommon-prefix.pch \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/node_modules/react-native/ReactCommon/turbomodule/core/platform/ios/RCTTurboModule.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTModuleMethod.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTBridgeMethod.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTNullability.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/node_modules/react-native/ReactCommon/jscallinvoker/ReactCommon/JSCallInvoker.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/node_modules/react-native/ReactCommon/turbomodule/core/TurboModule.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-jsi/jsi/jsi.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-jsi/jsi/jsi-inl.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-cxxreact/cxxreact/MessageQueueThread.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTCxxConvert.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTManagedPointer.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/node_modules/react-native/ReactCommon/turbomodule/core/LongLivedObject.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/node_modules/react-native/ReactCommon/turbomodule/core/TurboModuleUtils.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Folly/folly/Optional.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Folly/folly/Portability.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Folly/folly/portability/Config.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Folly/folly/CPortability.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Folly/folly/Traits.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Folly/folly/Utility.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Folly/folly/lang/Exception.h \
+  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Folly/folly/CppAttributes.h
