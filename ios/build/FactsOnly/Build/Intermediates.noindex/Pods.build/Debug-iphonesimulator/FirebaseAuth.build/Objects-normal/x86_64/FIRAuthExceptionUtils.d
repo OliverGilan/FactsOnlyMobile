@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthExceptionUtils.m \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthExceptionUtils.h
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthExceptionUtils.m \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthExceptionUtils.h

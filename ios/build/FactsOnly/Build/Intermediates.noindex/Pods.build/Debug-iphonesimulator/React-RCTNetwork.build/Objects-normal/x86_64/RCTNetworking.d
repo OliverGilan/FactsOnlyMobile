@@ -1,31 +1,31 @@
 dependencies: \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/node_modules/react-native/Libraries/Network/RCTNetworking.mm \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Target\ Support\ Files/React-RCTNetwork/React-RCTNetwork-prefix.pch \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTEventDispatcher.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTNetworkTask.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTURLRequestDelegate.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTURLRequestHandler.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTNetworking.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTEventEmitter.h \
-  /Users/olivergilan/Documents/FactsOnly/iOS/FactsOnly/ios/Pods/Headers/Public/React-Core/React/RCTHTTPRequestHandler.h
+  /Users/olivergilan/Documents/FactsOnly/Mobile/node_modules/react-native/Libraries/Network/RCTNetworking.mm \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Target\ Support\ Files/React-RCTNetwork/React-RCTNetwork-prefix.pch \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTEventDispatcher.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTNetworkTask.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTURLRequestDelegate.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTURLRequestHandler.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTNetworking.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTEventEmitter.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/Headers/Public/React-Core/React/RCTHTTPRequestHandler.h
