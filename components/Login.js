@@ -36,6 +36,7 @@ class Login extends React.Component{
                 <Text style={styles.label}>Password</Text>
                 <TextInput style={styles.textbox}
                     placeholder="********"
+                    secureTextEntry={true}
                     onChangeText={(password) => this.setState({password})}
                     editable={true}
                     multiline={false}

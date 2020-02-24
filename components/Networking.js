@@ -14,7 +14,7 @@ export async function getUser(uid){
   var token = await auth().currentUser.getIdToken()
   try {
     return await fetch(`${production.api}` + 'user', {
-      method: 'GET',
+      method: 'POST',
       headers: {
         authorization: `Bearer ${token}`
       },
@@ -66,7 +66,7 @@ export async function checkSaved(uid, fid){
   var token = await auth().currentUser.getIdToken()
   try {
     return await fetch(`${production.api}` + 'isSaved/', {
-      method: 'GET',
+      method: 'POST',
       headers: {
         authorization: `Bearer ${token}`
       },
@@ -141,7 +141,7 @@ export async function getSavedFacts(uid){
   console.log("TOKEN: " + JSON.stringify(token))
   try {
     return await fetch(`${production.api}` + 'saved/', {
-      method: 'GET',
+      method: 'POST',
       headers: {
         authorization: `Bearer ${token}`
       },

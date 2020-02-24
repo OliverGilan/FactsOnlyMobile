@@ -39,13 +39,15 @@ class Menu extends React.Component{
                     </View>
                 )}
                 {!isSignedIn() && (
-                    <TouchableOpacity
-                        style={styles.button}
-                        activeOpacity={.65}
-                        onPress={() => this.props.navigation.navigate('Login')}
-                    >
-                        <Text style={{color: "black", fontWeight: '700', fontSize: 14}}> Sign In </Text>
-                    </TouchableOpacity>
+                    <View style={{marginVertical: 40}}>
+                        <TouchableOpacity
+                            style={styles.button}
+                            activeOpacity={.65}
+                            onPress={() => this.props.navigation.navigate('Login')}
+                        >
+                            <Text style={{color: "black", fontWeight: '700', fontSize: 14}}> Sign In </Text>
+                        </TouchableOpacity>
+                    </View>
                 )}
             </SafeAreaView>
         </ScrollView>
