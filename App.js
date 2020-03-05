@@ -39,7 +39,6 @@ class App extends React.Component{
 
   componentDidMount(){
     fetchFacts().then((response) => {
-        console.log(response)
       this.setState({
         facts: response,
         refreshing: false

@@ -17,11 +17,9 @@ class Saved extends React.Component{
         }
     }
 
-
     componentDidMount(){
         var uid = auth().currentUser.uid
         getSavedFacts(uid).then((response) => {
-            console.log("RESONSE: " + JSON.stringify(response))
             if(response.error){
                 Alert.alert('Error!', 'It seems you are not authorized to view saved facts...')
                 this.props.navigation.navigate('Feed')

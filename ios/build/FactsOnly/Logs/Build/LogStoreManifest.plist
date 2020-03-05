@@ -40,7 +40,7 @@
 			<key>uniqueIdentifier</key>
 			<string>2E68454A-04F1-461C-B139-744181FCB865</string>
 		</dict>
-		<key>5195831B-3C5D-4FD0-B001-B868BD944FF6</key>
+		<key>39CB3253-02DE-49D0-A59E-C6430478FA84</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>5195831B-3C5D-4FD0-B001-B868BD944FF6.xcactivitylog</string>
+			<string>39CB3253-02DE-49D0-A59E-C6430478FA84.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,13 +66,13 @@
 			<key>signature</key>
 			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>604438723.57348394</real>
+			<real>605124136.72921896</real>
 			<key>timeStoppedRecording</key>
-			<real>604438730.38959205</real>
+			<real>605124148.12873399</real>
 			<key>title</key>
 			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>5195831B-3C5D-4FD0-B001-B868BD944FF6</string>
+			<string>39CB3253-02DE-49D0-A59E-C6430478FA84</string>
 		</dict>
 	</dict>
 </dict>

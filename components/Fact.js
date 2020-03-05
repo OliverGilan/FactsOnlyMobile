@@ -24,7 +24,7 @@ class Fact extends React.Component{
     componentDidMount(){
         if(isSignedIn()){
             var uid = auth().currentUser.uid
-            checkSaved(uid, this.state.fact.id).then((result) => {
+            checkSaved(uid, this.state.fact.fid).then((result) => {
                 this.setState({
                     saved: result.saved,
                     loading: false
@@ -57,7 +57,7 @@ class Fact extends React.Component{
         }else{
             if(this.state.saved){
                 //Unsave
-                unsaveFact(this.state.fact.id, uid)
+                unsaveFact(this.state.fact.fid, uid)
                     .then((response) => {
                         if(response){
                             this.update(false)
@@ -65,7 +65,7 @@ class Fact extends React.Component{
                     })
             }else{
                 //Save
-                saveFact(this.state.fact.id, uid)
+                saveFact(this.state.fact.fid, uid)
                     .then((response) => {
                         if(response){
                             this.update(true)

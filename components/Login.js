@@ -81,7 +81,8 @@ const styles = StyleSheet.create({
     textbox: {
         padding: 10,
         borderWidth: .25,
-        marginBottom: 20
+        marginBottom: 20,
+        color: "black"
     },
     button: {
         backgroundColor: "black",
