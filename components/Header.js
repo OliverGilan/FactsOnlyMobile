@@ -15,6 +15,7 @@ class Header extends React.Component{
                         <Image style={{width: 25, height: 25}} source={require('../resources/icon.png')} />
                     {/* <Text>FO</Text> */}
                 </TouchableOpacity>
+                
             </View>
         )
     }

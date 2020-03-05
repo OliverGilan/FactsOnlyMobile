@@ -5,8 +5,10 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Menu from './components/Menu'
 import Header from './components/Header'
+import HeaderRight from './components/HeaderRight'
 import Feed from './components/Feed'
 import Saved from './components/Saved'
+import SearchView from './components/SearchView'
 import { fetchFacts } from './components/Networking'
 import { checkUser } from './components/Authentication'
 import 'react-native-gesture-handler'
@@ -37,6 +39,7 @@ class App extends React.Component{
 
   componentDidMount(){
     fetchFacts().then((response) => {
+        console.log(response)
       this.setState({
         facts: response,
         refreshing: false
@@ -94,7 +97,8 @@ const Stack = createStackNavigator({
     screen: App,
     navigationOptions: ({navigation}) => {
       return{
-        headerLeft: () => <Header />
+        headerLeft: () => <Header />,
+        // headerRight: () => <HeaderRight />
       }
     }
   },
@@ -119,6 +123,12 @@ const Stack = createStackNavigator({
     navigationOptions: {
       title: 'Saved Facts'
     }
+  },
+  Search: {
+      screen: SearchView,
+      navigationOptions: {
+          title: 'Search'
+      }
   }
 }, {headerMode: 'float'});
 
