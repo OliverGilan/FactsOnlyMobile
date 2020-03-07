@@ -24,6 +24,7 @@ export async function getUser(uid){
 
 export async function submitUser(uid, email, today){
     var token = await auth().currentUser.getIdToken()
+    console.log(uid + " + " + email + " + " + today)
     const headers={
         Accept: 'application/json',
         'Content-Type': 'application/json',
@@ -50,13 +51,13 @@ export async function submitReport(fid, issue, email){
         email: email,
         issue: issue
     }, {headers:headers})
-    .then(res => res.data)
+    .then(res => res)
     .catch(err => console.log(err))
 }
 
 export async function checkSaved(uid, fid){
     var token = await auth().currentUser.getIdToken()
-    console.log(fid);
+    console.log(token)
     const headers={
         Accept: 'application/json',
         'Content-Type': 'application/json',

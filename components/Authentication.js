@@ -98,6 +98,7 @@ export async function createAccount(email, password){
 
     try {
         const user = await auth().createUserWithEmailAndPassword(email, password)
+        console.log("added on firebase")
         return await submitUser(user.user.uid, email, getToday())
     } catch (e) {
         switch(e.code){

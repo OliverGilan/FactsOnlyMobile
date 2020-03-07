@@ -2,6 +2,7 @@ import React from 'react'
 import {View, Text, StyleSheet, Button, Alert} from 'react-native'
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import { withNavigation } from 'react-navigation';
+import {submitReport} from './Networking'
 
 class Report extends React.Component{
     constructor(props){
@@ -37,7 +38,7 @@ class Report extends React.Component{
             return;
         }
 
-        submitData(this.state.fact.id, this.state.issue, this.state.email).then(response => {
+        submitReport(this.state.fact.fid, this.state.issue, this.state.email).then(response => {
             if(response.status == 200){
                 this.setState({
                     submitted: true
@@ -142,6 +143,7 @@ const styles = StyleSheet.create({
     textbox: {
         padding: 10,
         borderWidth: .25,
+        color: "black"
     },
     button: {
         backgroundColor: "black",

@@ -25,6 +25,7 @@ class Fact extends React.Component{
         if(isSignedIn()){
             var uid = auth().currentUser.uid
             checkSaved(uid, this.state.fact.fid).then((result) => {
+                // console.log(result)
                 this.setState({
                     saved: result.saved,
                     loading: false
