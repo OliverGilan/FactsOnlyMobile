@@ -19,7 +19,7 @@ class Menu extends React.Component{
             <ScrollView>
             <SafeAreaView style={{marginVertical: 20}}>
                 <Image style={{width: "80%", height: "80%", alignSelf: "center", }} source={require('../resources/icon.png')} />
-                {isSignedIn() && isAdmin && (
+                {isSignedIn() && isAdmin() && (
                     <View style={{marginVertical: 25}}>
                         <TouchableHighlight
                             style={styles.button}

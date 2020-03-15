@@ -59,6 +59,8 @@ export async function login(email, password){
                 case 'auth/invalid-email':
                     Alert.alert("Invalid Email", 'Input well-formatted email!')
                 break;
+                case 'auth/wrong-password':
+                    Alert.alert("Invalid Password", 'Incorrect password for that account')
             }
     }
 }

@@ -137,7 +137,7 @@ class Fact extends React.Component{
                         <Text style={styles.flags}>unsave</Text>
                     </TouchableOpacity>}
                 </View>
-                {isAdmin && (
+                {isSignedIn() && isAdmin() && (
                     <View style={styles.adminFooter}>
                         <TouchableOpacity 
                             activeOpacity={.65} 

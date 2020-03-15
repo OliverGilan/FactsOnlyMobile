@@ -36,7 +36,7 @@ export async function submitUser(uid, email, today){
         email: email,
         date: today
     }, {headers:headers})
-    .then(res => res.data)
+    .then(res => res)
     .catch(err => console.log(err))
 }
 

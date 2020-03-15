@@ -19,15 +19,15 @@ class SignUp extends React.Component{
 
     submit(){
         createAccount(this.state.email, this.state.password).then((response) => {
-            // if(response.status == 200){
+            if(response.status == 200){
                 console.log(response)
                 console.log("User created");
                 Alert.alert('Welcome!', 'Thank you for joining! Feel free to save as many facts as you would like!');
                 this.props.navigation.navigate('Feed')
-            // }else{
-            //     console.log(response)
-            //     console.log("Could not send user info")
-            // }
+            }else{
+                console.log(response)
+                console.log("Could not send user info")
+            }
         })
     }
 

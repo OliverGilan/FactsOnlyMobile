@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, Button } from 'react-native'
+import {View, Text, StyleSheet, Button, Alert } from 'react-native'
 import { ScrollView, TextInput } from 'react-native-gesture-handler'
 import { withNavigation } from 'react-navigation'
 import { login } from '../networking/Authentication'
