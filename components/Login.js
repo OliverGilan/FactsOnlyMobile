@@ -2,7 +2,7 @@ import React from 'react'
 import {View, Text, StyleSheet, Button } from 'react-native'
 import { ScrollView, TextInput } from 'react-native-gesture-handler'
 import { withNavigation } from 'react-navigation'
-import { login } from './Authentication'
+import { login } from '../networking/Authentication'
 
 class Login extends React.Component{
     constructor(props){

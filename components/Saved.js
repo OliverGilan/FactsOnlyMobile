@@ -1,6 +1,6 @@
 import React from 'react'
 import Feed from './Feed'
-import { getSavedFacts } from './Networking'
+import { getSavedFacts } from '../networking/Networking'
 import {View, Text, StyleSheet, RefreshControl, Alert} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { withNavigation } from 'react-navigation'

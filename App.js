@@ -9,8 +9,8 @@ import HeaderRight from './components/HeaderRight'
 import Feed from './components/Feed'
 import Saved from './components/Saved'
 import SearchView from './components/SearchView'
-import { fetchFacts } from './components/Networking'
-import { checkUser } from './components/Authentication'
+import { fetchFacts } from './networking/Networking'
+import { checkUser } from './networking/Authentication'
 import 'react-native-gesture-handler'
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
@@ -25,6 +25,8 @@ import {
   StatusBar,
   RefreshControl
 } from 'react-native';
+import CreateFact from './components/CreateFact'
+import EditFact from './components/EditFact'
 
 class App extends React.Component{
   constructor(props){
@@ -128,7 +130,19 @@ const Stack = createStackNavigator({
       navigationOptions: {
           title: 'Search'
       }
-  }
+  },
+  CreateFact: {
+      screen: CreateFact,
+      navigationOptions: {
+          title: 'Create Fact'
+      }
+  },
+  EditFact: {
+    screen: EditFact,
+    navigationOptions: {
+        title: 'Edit Fact'
+    }
+}
 }, {headerMode: 'float'});
 
 const drawerNavigator = createDrawerNavigator({

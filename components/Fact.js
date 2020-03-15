@@ -2,8 +2,8 @@ import React from 'react'
 import {View, Text, StyleSheet, Alert} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { withNavigation } from 'react-navigation'
-import { isSignedIn } from './Authentication'
-import { checkSaved, saveFact, unsaveFact } from './Networking'
+import { isSignedIn } from '../networking/Authentication'
+import { checkSaved, saveFact, unsaveFact, deletePost, isAdmin } from '../networking/Networking'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import auth from '@react-native-firebase/auth'
 
@@ -76,6 +76,40 @@ class Fact extends React.Component{
         }
     }
 
+    tryDelete() {
+        Alert.alert(
+            'Delete?',
+            '',
+            [
+                {text: 'OK', onPress: () => this.delete()},
+                {text: 'Cancel', style: 'cancel'}
+            ]
+        )
+    }
+
+    delete() {
+        deletePost(this.state.fact.fid)
+        .then(res=>{
+            if(res){
+                Alert.alert(
+                    'Deleted',
+                    '',
+                    [
+                        {text: 'OK', style: 'confirm'}
+                    ]
+                )
+            }else{
+                Alert.alert(
+                    'Error Deleting',
+                    res,
+                    [
+                        {text: 'OK', style: 'cancel'}
+                    ]
+                )
+            }
+        })
+    }
+
     render(){
         return(
             <ScrollView style={styles.margin}>
@@ -103,6 +137,22 @@ class Fact extends React.Component{
                         <Text style={styles.flags}>unsave</Text>
                     </TouchableOpacity>}
                 </View>
+                {isAdmin && (
+                    <View style={styles.adminFooter}>
+                        <TouchableOpacity 
+                            activeOpacity={.65} 
+                            onPress={() => this.props.navigation.navigate('EditFact', {
+                                fact: this.state.fact
+                            })}>
+                            <Text style={styles.flags}>Edit</Text>
+                        </TouchableOpacity>
+                         <TouchableOpacity 
+                            activeOpacity={.65} 
+                            onPress={() => this.tryDelete()}>
+                            <Text style={styles.flags}>Delete</Text>
+                        </TouchableOpacity>
+                    </View>
+                )}
             </ScrollView>
         )
     }
@@ -137,6 +187,12 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         padding: 50
+    },
+    adminFooter:{
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingHorizontal: 50
     },
     flags:{
         color: "gray",
