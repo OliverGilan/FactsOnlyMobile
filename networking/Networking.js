@@ -127,12 +127,13 @@ export async function isAdmin(){
         }
         return await Axios.post(link+'isAdmin', {}, {headers:headers})
         .then(res => {
-            if(res === 200){
+            if(res.status === 200){
                 return true;
             }else{
                 return false;
             }
         })
+        .catch(err => false)
     }
 }
 
@@ -149,7 +150,7 @@ export async function createPost(headline, body){
     },{headers:headers}).then(res => {
         if(res.status===200){return true}
         else{return res}
-    })
+    }).catch(err => err)
 }
 
 export async function editPost(id, date, headline, body){
@@ -164,7 +165,7 @@ export async function editPost(id, date, headline, body){
     },{headers:headers}).then(res => {
         if(res.status===200){return true}
         else{return res}
-    })
+    }).catch(err => err)
 }
 
 export async function deletePost(id){
@@ -184,5 +185,5 @@ export async function deletePost(id){
         }else{
             return res
         }
-    })
+    }).catch(err => err)
 }

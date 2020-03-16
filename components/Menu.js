@@ -9,9 +9,35 @@ import auth from '@react-native-firebase/auth'
 
 
 class Menu extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            admin: false
+        }
+    }
+
+    componentDidMount(){
+        this.admin().then(res => {
+            this.setState({
+                admin: res
+            })
+        })
+    }
+
     logout(){
         auth().signOut();
         this.props.navigation.goBack();
+    }
+
+    async admin(){
+        var bool = false;
+        await isAdmin().then(res=>{
+            if(res){
+                bool = true
+            }
+        })
+        console.log("admin: " + bool)
+        return bool
     }
 
     render(){
@@ -19,8 +45,9 @@ class Menu extends React.Component{
             <ScrollView>
             <SafeAreaView style={{marginVertical: 20}}>
                 <Image style={{width: "80%", height: "80%", alignSelf: "center", }} source={require('../resources/icon.png')} />
-                {isSignedIn() && isAdmin() && (
+                {isSignedIn() && this.state.admin && (
                     <View style={{marginVertical: 25}}>
+                        {console.log(this.state.admin)}
                         <TouchableHighlight
                             style={styles.button}
                             activeOpacity={.65}
@@ -47,8 +74,9 @@ class Menu extends React.Component{
                         </TouchableHighlight>
                     </View>
                 )}
-                {isSignedIn() && !isAdmin() && (
+                {isSignedIn() && !this.state.admin && (
                     <View style={{marginVertical: 25}}>
+                        {console.log(this.state.admin)}
                         <TouchableHighlight
                             style={styles.button}
                             activeOpacity={.65}

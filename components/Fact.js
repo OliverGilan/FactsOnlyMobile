@@ -14,7 +14,8 @@ class Fact extends React.Component{
         this.state = {
             fact: this.props.navigation.getParam('fact'),
             saved: false,
-            loading: true
+            loading: true,
+            admin: false
         }
         this.trySave = this.trySave.bind(this)
         this.componentDidMount = this.componentDidMount.bind(this)
@@ -31,11 +32,26 @@ class Fact extends React.Component{
                     loading: false
                 })
             })
+            this.admin().then(res => {
+                this.setState({
+                    admin: res
+                })
+            })
         }else{
             this.setState({
                 loading: false
             })
         }
+    }
+
+    async admin(){
+        var bool = false;
+        await isAdmin().then(res=>{
+            if(res){
+                bool = true
+            }
+        })
+        return bool
     }
 
     update(saved) {
@@ -137,7 +153,7 @@ class Fact extends React.Component{
                         <Text style={styles.flags}>unsave</Text>
                     </TouchableOpacity>}
                 </View>
-                {isSignedIn() && isAdmin() && (
+                {isSignedIn() && this.state.admin && (
                     <View style={styles.adminFooter}>
                         <TouchableOpacity 
                             activeOpacity={.65} 
