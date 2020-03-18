@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, Button, Alert} from 'react-native'
+import {View, Text, StyleSheet, Button, Alert, Picker} from 'react-native'
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import { withNavigation } from 'react-navigation';
 import { editPost } from '../networking/Networking'
@@ -11,6 +11,7 @@ class EditFact extends React.Component{
             fact: this.props.navigation.getParam('fact'),
             body: this.props.navigation.getParam('fact').fact,
             height: 40,
+            category: this.props.navigation.getParam('fact').category,
             headline: this.props.navigation.getParam('fact').headline,
             fid: this.props.navigation.getParam('fact').fid,
             date: this.props.navigation.getParam('fact').date,
@@ -88,7 +89,20 @@ class EditFact extends React.Component{
                     value={this.state.body}
                     onContentSizeChange={(e) => this.updateSize(e.nativeEvent.contentSize.height)}
                     />
-                
+                <Text style={styles.label}>Category</Text>
+                <Picker
+                    selectedValue={this.state.category}
+                    style={styles.picker}
+                    itemStyle={styles.pickerItem}
+                    onValueChange={(itemValue, itemIndex) =>
+                    this.setState({category: itemValue})
+                }>
+                    <Picker.Item label="Economy" value="Economy" />
+                    <Picker.Item label="Politics" value="Politics" />
+                    <Picker.Item label="Health" value="Health" />
+                    <Picker.Item label="Sports" value="Sports" />
+                </Picker>
+
                 <View style={styles.button}>
                     <Button
                         title="Submit"
@@ -147,6 +161,14 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center"
+    },
+    picker:{
+        paddingVertical: 0,
+        marginHorizontal: 0,
+    },
+    pickerItem:{
+        height: 88,
+        
     }
 });
 
