@@ -26,7 +26,7 @@ class EditFact extends React.Component{
     }
 
     submit = () => {
-        editPost(this.state.fid, this.state.date, this.state.headline, this.state.body)
+        editPost(this.state.fid, this.state.date, this.state.headline, this.state.body, this.state.category)
         .then(res=>{
             if(res === true){
                 this.setState({
@@ -98,8 +98,8 @@ class EditFact extends React.Component{
                     this.setState({category: itemValue})
                 }>
                     <Picker.Item label="Economy" value="Economy" />
-                    <Picker.Item label="Politics" value="Politics" />
                     <Picker.Item label="Health" value="Health" />
+                    <Picker.Item label="Politics" value="Politics" />
                     <Picker.Item label="Sports" value="Sports" />
                 </Picker>
 
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     },
     pickerItem:{
         height: 88,
-        
+
     }
 });
 

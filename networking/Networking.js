@@ -137,7 +137,7 @@ export async function isAdmin(){
     }
 }
 
-export async function createPost(headline, body){
+export async function createPost(headline, body, category){
     var token = await auth().currentUser.getIdToken()
     const headers={
         Accept: 'application/json',
@@ -146,14 +146,15 @@ export async function createPost(headline, body){
     }
     return await Axios.post(link,{
       headline: headline,
-      fact: body
+      fact: body,
+      category: category
     },{headers:headers}).then(res => {
         if(res.status===200){return true}
         else{return res}
     }).catch(err => err)
 }
 
-export async function editPost(id, date, headline, body){
+export async function editPost(id, date, headline, body, category){
     var token = await auth().currentUser.getIdToken()
     const headers={
         Accept: 'application/json',
@@ -161,7 +162,7 @@ export async function editPost(id, date, headline, body){
         authorization: `Bearer ${token}`
     }
     return await Axios.post(link + 'editFact',{
-        fact: {body: body, id: id, headline: headline, date: date}
+        fact: {body: body, id: id, headline: headline, date: date, category: category}
     },{headers:headers}).then(res => {
         if(res.status===200){return true}
         else{return res}

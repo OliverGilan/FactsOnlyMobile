@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, Button, Alert} from 'react-native'
+import {View, Text, StyleSheet, Button, Alert, Picker} from 'react-native'
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import { withNavigation } from 'react-navigation';
 import { createPost } from '../networking/Networking'
@@ -12,7 +12,8 @@ class CreateFact extends React.Component{
             body: '',
             height: 40,
             headline: '',
-            submitted: false
+            submitted: false,
+            category: 'Economy',
         }
     }
 
@@ -23,7 +24,7 @@ class CreateFact extends React.Component{
     }
 
     submit = () => {
-        createPost(this.state.headline, this.state.body)
+        createPost(this.state.headline, this.state.body, this.state.category)
         .then(res=>{
             if(res === true){
                 this.setState({
@@ -76,6 +77,19 @@ class CreateFact extends React.Component{
                     value={this.state.body}
                     onContentSizeChange={(e) => this.updateSize(e.nativeEvent.contentSize.height)}
                     />
+                <Text style={styles.label}>Category</Text>
+                <Picker
+                    selectedValue={this.state.category}
+                    style={styles.picker}
+                    itemStyle={styles.pickerItem}
+                    onValueChange={(itemValue, itemIndex) =>
+                        this.setState({category: itemValue})
+                }>
+                    <Picker.Item label="Economy" value="Economy" />
+                    <Picker.Item label="Health" value="Health" />
+                    <Picker.Item label="Politics" value="Politics" />
+                    <Picker.Item label="Sports" value="Sports" />
+                </Picker>
                 
                 <View style={styles.button}>
                     <Button
@@ -135,6 +149,14 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center"
+    },
+    picker:{
+        paddingVertical: 0,
+        marginHorizontal: 0,
+    },
+    pickerItem:{
+        height: 88,
+
     }
 });
 
