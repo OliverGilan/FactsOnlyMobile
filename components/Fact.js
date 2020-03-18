@@ -132,6 +132,7 @@ class Fact extends React.Component{
                 <Text style={styles.headline}>
                     {this.state.fact.headline}
                 </Text>
+                <Text style={styles.category}>{this.state.fact.category}</Text>
                 <Text style={styles.date}>{this.state.fact.date}</Text>
                 <Text style={styles.body}>{this.state.fact.fact}</Text>
                 <View style={styles.footer}>
@@ -177,26 +178,27 @@ class Fact extends React.Component{
 const styles = StyleSheet.create({
     margin:{
         paddingBottom: 35,
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        paddingHorizontal: 20,
     },
     headline:{
         width: "100%",
         fontSize: 30,
         fontWeight: "bold",
-        paddingHorizontal: 20,
         paddingTop: 10
+    },
+    category: {
+        alignSelf: "flex-start",
+        fontWeight: '200',
     },
     date:{
         fontWeight: '200',
-        paddingTop: 10,
-        paddingHorizontal: 20,
-        paddingBottom: 5
+        paddingTop: 20,
     },
     body:{
         width: "100%",
         fontSize: 20,
-        paddingHorizontal: 20,
-        paddingTop: 20
+        paddingTop: 10
     },
     footer:{
         width: "100%",
