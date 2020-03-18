@@ -11,11 +11,11 @@
 	<key>CFBundlePackageType</key>
 	<string>dSYM</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.2</string>
+	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>firebase_json_raw</key>
 	<string>e30=</string>
 </dict>

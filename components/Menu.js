@@ -36,7 +36,6 @@ class Menu extends React.Component{
                 bool = true
             }
         })
-        console.log("admin: " + bool)
         return bool
     }
 
@@ -47,7 +46,6 @@ class Menu extends React.Component{
                 <Image style={{width: "80%", height: "80%", alignSelf: "center", }} source={require('../resources/icon.png')} />
                 {isSignedIn() && this.state.admin && (
                     <View style={{marginVertical: 25}}>
-                        {console.log(this.state.admin)}
                         <TouchableHighlight
                             style={styles.button}
                             activeOpacity={.65}
@@ -76,7 +74,6 @@ class Menu extends React.Component{
                 )}
                 {isSignedIn() && !this.state.admin && (
                     <View style={{marginVertical: 25}}>
-                        {console.log(this.state.admin)}
                         <TouchableHighlight
                             style={styles.button}
                             activeOpacity={.65}
