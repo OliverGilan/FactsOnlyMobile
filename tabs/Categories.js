@@ -2,47 +2,20 @@ import React from 'react'
 import {View, Text, StyleSheet, Image } from 'react-native'
 import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { isSignedIn } from '../networking/Authentication'
 import { isAdmin } from '../networking/Networking'
-import { TouchableOpacity } from 'react-native-gesture-handler'
 import auth from '@react-native-firebase/auth'
 
 
-class Menu extends React.Component{
+export default class Categories extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            admin: false
         }
-    }
-
-    componentDidMount(){
-        this.admin().then(res => {
-            this.setState({
-                admin: res
-            })
-        })
-    }
-
-    logout(){
-        auth().signOut();
-        this.props.navigation.goBack();
-    }
-
-    async admin(){
-        var bool = false;
-        await isAdmin().then(res=>{
-            if(res){
-                bool = true
-            }
-        })
-        return bool
     }
 
     render(){
         return(
-            <ScrollView>
-            <SafeAreaView>
+            <ScrollView style={{backgroundColor: "#fff"}}>
                     <View>
                         <TouchableHighlight
                             style={styles.button}
@@ -77,7 +50,6 @@ class Menu extends React.Component{
                             <Text style={{color: "black", fontWeight: '700', fontSize: 14}}>Sports</Text>
                         </TouchableHighlight>
                     </View>
-            </SafeAreaView>
         </ScrollView>
         )
     }
@@ -86,6 +58,7 @@ class Menu extends React.Component{
 const styles = StyleSheet.create({
     button:{
         padding: 20,
+        borderBottomColor: 'black',
+        borderBottomWidth: .25
     }
 })
-export default Menu;

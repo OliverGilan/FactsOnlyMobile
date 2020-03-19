@@ -8,11 +8,11 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import auth from '@react-native-firebase/auth'
 
 
-class Fact extends React.Component{
+export default class Fact extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            fact: this.props.navigation.getParam('fact'),
+            fact: this.props.route.params.fact,
             saved: false,
             loading: true,
             admin: false
@@ -217,5 +217,3 @@ const styles = StyleSheet.create({
         padding: 10,
     }
 });
-
-export default withNavigation(Fact);

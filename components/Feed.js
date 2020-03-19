@@ -1,11 +1,10 @@
 import React from 'react'
 import Card from './Card'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import { withNavigation } from 'react-navigation'
 import { StyleSheet } from 'react-native'
 
 
-class Feed extends React.Component{
+export default class Feed extends React.Component{
 
     render(){
         return (
@@ -31,5 +30,3 @@ const styles = StyleSheet.create({
       margin: 25
     }
 });
-
-export default withNavigation(Feed);

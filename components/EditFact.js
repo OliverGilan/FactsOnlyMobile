@@ -1,20 +1,19 @@
 import React from 'react'
 import {View, Text, StyleSheet, Button, Alert, Picker} from 'react-native'
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
-import { withNavigation } from 'react-navigation';
 import { editPost } from '../networking/Networking'
 
-class EditFact extends React.Component{
+export default class EditFact extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            fact: this.props.navigation.getParam('fact'),
-            body: this.props.navigation.getParam('fact').fact,
+            fact: this.props.route.params.fact,
+            body: this.props.route.params.fact.fact,
             height: 40,
-            category: this.props.navigation.getParam('fact').category,
-            headline: this.props.navigation.getParam('fact').headline,
-            fid: this.props.navigation.getParam('fact').fid,
-            date: this.props.navigation.getParam('fact').date,
+            category: this.props.route.params.fact.category,
+            headline: this.props.route.params.fact.headline,
+            fid: this.props.route.params.fact.fid,
+            date: this.props.route.params.fact.date,
             submitted: false
         }
     }
@@ -171,5 +170,3 @@ const styles = StyleSheet.create({
 
     }
 });
-
-export default withNavigation(EditFact);

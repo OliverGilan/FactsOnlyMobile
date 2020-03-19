@@ -1,13 +1,12 @@
 import React from 'react'
-import Feed from './Feed'
-import { getSavedFacts } from '../networking/Networking'
+import Feed from '../components/Feed'
+import { getEconFacts } from '../networking/Networking'
 import {View, Text, StyleSheet, RefreshControl, Alert} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
-import { withNavigation } from 'react-navigation'
 import auth from '@react-native-firebase/auth'
 
 
-class Economy extends React.Component{
+export default class Economy extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -18,8 +17,7 @@ class Economy extends React.Component{
     }
 
     componentDidMount(){
-        var uid = auth().currentUser.uid
-        getSavedFacts(uid).then((response) => {
+        getEconFacts().then((response) => {
             if(response.error){
                 Alert.alert('Error!', 'It seems you are not authorized to view saved facts...')
                 this.props.navigation.navigate('Feed')
@@ -35,7 +33,7 @@ class Economy extends React.Component{
 
     _onRefresh() {
         this.setState({refreshing: true});
-        getSavedFacts(auth().currentUser.uid).then((response) => {
+        getEconFacts().then((response) => {
           this.setState({
               facts: response,
               refreshing: false
@@ -76,5 +74,3 @@ const styles = StyleSheet.create({
         maxWidth: "100%", 
         flex: 1}
 });
-
-export default withNavigation(Economy);

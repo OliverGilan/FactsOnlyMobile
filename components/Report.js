@@ -1,14 +1,13 @@
 import React from 'react'
 import {View, Text, StyleSheet, Button, Alert} from 'react-native'
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
-import { withNavigation } from 'react-navigation';
 import {submitReport} from '../networking/Networking'
 
-class Report extends React.Component{
+export default class Report extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            fact: this.props.navigation.getParam('fact'),
+            fact: this.props.route.params.fact,
             issue: '',
             height: 40,
             email: '',
@@ -158,5 +157,3 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     }
 });
-
-export default withNavigation(Report);

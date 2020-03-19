@@ -58,7 +58,6 @@ export async function submitReport(fid, issue, email){
 
 export async function checkSaved(uid, fid){
     var token = await auth().currentUser.getIdToken()
-    console.log(token)
     const headers={
         Accept: 'application/json',
         'Content-Type': 'application/json',
@@ -104,7 +103,6 @@ export async function unsaveFact(fid, uid) {
 
 export async function getSavedFacts(uid){
     var token = await auth().currentUser.getIdToken()
-    var token = await auth().currentUser.getIdToken()
     const headers={
         Accept: 'application/json',
         'Content-Type': 'application/json',
@@ -113,6 +111,30 @@ export async function getSavedFacts(uid){
     return Axios.post(link+"saved", {
         uid: uid
     }, {headers:headers})
+    .then(res => res.data)
+    .catch(err => console.log(err))
+}
+
+export async function getEconFacts() {
+    return Axios.get(link+'economy')
+    .then(res => res.data)
+    .catch(err => console.log(err))
+}
+
+export async function getHealthFacts() {
+    return Axios.get(link+'health')
+    .then(res => res.data)
+    .catch(err => console.log(err))
+}
+
+export async function getPoliticalFacts() {
+    return Axios.get(link+'politics')
+    .then(res => res.data)
+    .catch(err => console.log(err))
+}
+
+export async function getSportsFacts() {
+    return Axios.get(link+'sports')
     .then(res => res.data)
     .catch(err => console.log(err))
 }

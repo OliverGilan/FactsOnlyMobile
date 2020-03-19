@@ -1,14 +1,12 @@
 import React from 'react'
 import {View, Text, StyleSheet, Button, Alert, Picker} from 'react-native'
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
-import { withNavigation } from 'react-navigation';
 import { createPost } from '../networking/Networking'
 
-class CreateFact extends React.Component{
+export default class CreateFact extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            // fact: this.props.navigation.getParam('fact'),
             body: '',
             height: 40,
             headline: '',
@@ -159,5 +157,3 @@ const styles = StyleSheet.create({
 
     }
 });
-
-export default withNavigation(CreateFact);

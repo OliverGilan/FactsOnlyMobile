@@ -1,13 +1,12 @@
 import React from 'react'
-import Feed from './Feed'
+import Feed from '../components/Feed'
 import { getSavedFacts } from '../networking/Networking'
 import {View, Text, StyleSheet, RefreshControl, Alert} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
-import { withNavigation } from 'react-navigation'
 import auth from '@react-native-firebase/auth'
 
 
-class Health extends React.Component{
+export default class Saved extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -76,5 +75,3 @@ const styles = StyleSheet.create({
         maxWidth: "100%", 
         flex: 1}
 });
-
-export default withNavigation(Health);

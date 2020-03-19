@@ -1,10 +1,9 @@
 import React from 'react'
 import {View, Text, StyleSheet, Button, Alert } from 'react-native'
 import { ScrollView, TextInput } from 'react-native-gesture-handler'
-import { withNavigation } from 'react-navigation'
 import { login } from '../networking/Authentication'
 
-class Login extends React.Component{
+export default class Login extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -92,5 +91,3 @@ const styles = StyleSheet.create({
         borderRadius: 25
     },
 })
-
-export default withNavigation(Login);

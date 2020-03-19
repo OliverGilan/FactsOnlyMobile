@@ -1,38 +1,103 @@
+import 'react-native-gesture-handler';
+import {
+    SafeAreaView,
+    StyleSheet,
+    ScrollView,
+    View,
+    Text,
+    StatusBar,
+    RefreshControl
+  } from 'react-native';
 import React from 'react'
+import auth from '@react-native-firebase/auth'
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import Categories from './tabs/Categories'
+import Saved from './tabs/Saved'
+
+import Sports from './categories/Sports'
+import Health from './categories/Health'
+import Politics from './categories/Poltiics'
+import Economy from './categories/Economy'
+
+import Feed from './components/Feed'
 import Fact from './components/Fact'
-import Report from './components/Report'
 import Login from './components/Login'
 import SignUp from './components/SignUp'
+import Report from './components/Report'
 import Menu from './components/Menu'
 import Header from './components/Header'
-import Categories from './components/Categories'
-import Sports from './components/Sports'
-import Health from './components/Health'
-import Politics from './components/Poltiics'
-import Economy from './components/Economy'
-import Feed from './components/Feed'
-import Saved from './components/Saved'
-import SearchView from './components/SearchView'
-import { fetchFacts } from './networking/Networking'
-import { checkUser } from './networking/Authentication'
-import 'react-native-gesture-handler'
-import { createAppContainer } from 'react-navigation'
-import { createStackNavigator } from 'react-navigation-stack'
-import { createDrawerNavigator } from 'react-navigation-drawer'
-import auth from '@react-native-firebase/auth'
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  RefreshControl
-} from 'react-native';
+
 import CreateFact from './components/CreateFact'
 import EditFact from './components/EditFact'
+import SearchView from './components/SearchView'
 
-class App extends React.Component{
+import { fetchFacts } from './networking/Networking'
+import { checkUser } from './networking/Authentication'
+
+
+
+const Tabs = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+export default class App extends React.Component{
+    createTabs = () => 
+        <Tabs.Navigator>
+            <Tabs.Screen name='Home' children={this.createHomeStack}/>
+            <Tabs.Screen name='Categories' children={this.createCategoriesStack}/>
+            <Tabs.Screen name='Saved' children={this.createSavedStack}/>
+            <Tabs.Screen name='Settings' children={this.createSettingsStack}/>
+        </Tabs.Navigator>
+    
+
+    createHomeStack = () => 
+        <Stack.Navigator initialRouteName='Home'>
+            <Stack.Screen name='Home' component={Home}/>
+            <Stack.Screen name='Fact' component={Fact}/>
+            <Stack.Screen name='Report' component={Report}/>
+            <Stack.Screen name='EditFact' component={EditFact}/>
+            <Stack.Screen name='Login' component={Login}/>
+            <Stack.Screen name='SignUp' component={SignUp}/>
+        </Stack.Navigator>
+    
+
+    createCategoriesStack = () => 
+        <Stack.Navigator initialRouteName='Categories'>
+            <Stack.Screen name='Categories' component={Categories}/>
+            <Stack.Screen name='Fact' component={Fact}/>
+            <Stack.Screen name='Report' component={Report}/>
+            <Stack.Screen name='Economy' component={Economy}/>
+            <Stack.Screen name='Health' component={Health}/>
+            <Stack.Screen name='Politics' component={Politics}/>
+            <Stack.Screen name='Sports' component={Sports}/>
+        </Stack.Navigator>
+    
+
+    createSavedStack = () => 
+        <Stack.Navigator initialRouteName='Saved'>
+            <Stack.Screen name='Saved' component={Saved}/>
+            <Stack.Screen name='Fact' component={Fact}/>
+            <Stack.Screen name='Report' component={Report}/>
+        </Stack.Navigator>
+    
+    createSettingsStack = () => 
+        <Stack.Navigator initialRouteName='Login'>
+            <Stack.Screen name='Login' component={Login}/>
+        </Stack.Navigator>
+
+    render(){
+        return(
+            <NavigationContainer>
+                {this.createTabs()}
+            </NavigationContainer>
+        )
+    }
+}
+
+class Home extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -41,7 +106,6 @@ class App extends React.Component{
       user: auth().currentUser
     }
   }
-
 
   componentDidMount(){
     fetchFacts().then((response) => {
@@ -96,106 +160,3 @@ const styles = StyleSheet.create({
     width: "100%",
   }
 })
-
-const Stack = createStackNavigator({
-  Feed: {
-    screen: App,
-    navigationOptions: ({navigation}) => {
-      return{
-        headerLeft: () => <Header />,
-        // headerRight: () => <HeaderRight />
-      }
-    }
-  },
-  Fact: {
-    screen: Fact,
-
-  },
-  Report: {
-    screen: Report,
-
-  },
-  Login: {
-    screen: Login,
-
-  },
-  SignUp: {
-    screen: SignUp,
-
-  },
-  Saved: {
-    screen: Saved,
-    navigationOptions: {
-      title: 'Saved Facts'
-    }
-  },
-  Search: {
-      screen: SearchView,
-      navigationOptions: {
-          title: 'Search'
-      }
-  },
-  CreateFact: {
-      screen: CreateFact,
-      navigationOptions: {
-          title: 'Create Fact'
-      }
-  },
-  EditFact: {
-    screen: EditFact,
-    navigationOptions: {
-        title: 'Edit Fact'
-    }
-    },
-   Categories: {
-        screen: Categories,
-        navigationOptions:{
-            title: 'Categories'
-        }
-    },
-    Sports: {
-        screen: Sports,
-        navigationOptions:{
-            title: 'Sports'
-        }
-    },
-    Politics: {
-        screen: Politics,
-        navigationOptions:{
-            title: 'Politics'
-        }
-    },
-    Health: {
-        screen: Health,
-        navigationOptions:{
-            title: 'Health'
-        }
-    },
-    Economy: {
-        screen: Economy,
-        navigationOptions:{
-            title: 'Economy'
-        }
-    }
-}, {headerMode: 'float'});
-
-const drawerNavigator = createDrawerNavigator({
-  Home: {
-    screen: Stack,
-  },
-}, {
-  initialRouteName: 'Home',
-  contentComponent: props => <Menu {...props}/>
-});
-
-const AppNavigator = createStackNavigator(
-  {
-    Feed: drawerNavigator,
-  },
-  {
-    headerMode: 'none'
-  }
-);
-
-
-export default createAppContainer(AppNavigator);
