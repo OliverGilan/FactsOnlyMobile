@@ -5,6 +5,11 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Menu from './components/Menu'
 import Header from './components/Header'
+import Categories from './components/Categories'
+import Sports from './components/Sports'
+import Health from './components/Health'
+import Politics from './components/Poltiics'
+import Economy from './components/Economy'
 import HeaderRight from './components/HeaderRight'
 import Feed from './components/Feed'
 import Saved from './components/Saved'
@@ -142,7 +147,37 @@ const Stack = createStackNavigator({
     navigationOptions: {
         title: 'Edit Fact'
     }
-}
+    },
+   Categories: {
+        screen: Categories,
+        navigationOptions:{
+            title: 'Categories'
+        }
+    },
+    Sports: {
+        screen: Sports,
+        navigationOptions:{
+            title: 'Sports'
+        }
+    },
+    Politics: {
+        screen: Politics,
+        navigationOptions:{
+            title: 'Politics'
+        }
+    },
+    Health: {
+        screen: Health,
+        navigationOptions:{
+            title: 'Health'
+        }
+    },
+    Economy: {
+        screen: Economy,
+        navigationOptions:{
+            title: 'Economy'
+        }
+    }
 }, {headerMode: 'float'});
 
 const drawerNavigator = createDrawerNavigator({

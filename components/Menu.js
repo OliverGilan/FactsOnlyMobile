@@ -58,6 +58,14 @@ class Menu extends React.Component{
                             style={styles.button}
                             activeOpacity={.65}
                             underlayColor={'lightgray'}
+                            onPress={()=> this.props.navigation.navigate('Categories')}
+                            >
+                            <Text style={{color: "black", fontWeight: '700', fontSize: 14}}> Categories </Text>
+                        </TouchableHighlight>
+                        <TouchableHighlight
+                            style={styles.button}
+                            activeOpacity={.65}
+                            underlayColor={'lightgray'}
                             onPress={()=> this.props.navigation.navigate('Saved')}
                             >
                             <Text style={{color: "black", fontWeight: '700', fontSize: 14}}> Saved Facts </Text>
@@ -78,6 +86,14 @@ class Menu extends React.Component{
                             style={styles.button}
                             activeOpacity={.65}
                             underlayColor={'lightgray'}
+                            onPress={()=> this.props.navigation.navigate('Categories')}
+                            >
+                            <Text style={{color: "black", fontWeight: '700', fontSize: 14}}> Categories </Text>
+                        </TouchableHighlight>
+                        <TouchableHighlight
+                            style={styles.button}
+                            activeOpacity={.65}
+                            underlayColor={'lightgray'}
                             onPress={()=> this.props.navigation.navigate('Saved')}
                             >
                             <Text style={{color: "black", fontWeight: '700', fontSize: 14}}> Saved Facts </Text>
@@ -94,6 +110,14 @@ class Menu extends React.Component{
                 )}
                 {!isSignedIn() && (
                     <View style={{marginVertical: 40}}>
+                        <TouchableHighlight
+                            style={styles.button}
+                            activeOpacity={.65}
+                            underlayColor={'lightgray'}
+                            onPress={()=> this.props.navigation.navigate('Categories')}
+                            >
+                            <Text style={{color: "black", fontWeight: '700', fontSize: 14}}> Categories </Text>
+                        </TouchableHighlight>
                         <TouchableOpacity
                             style={styles.button}
                             activeOpacity={.65}
