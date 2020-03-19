@@ -6,6 +6,40 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>039F01AA-93BD-4763-98BC-3365630DB840</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>039F01AA-93BD-4763-98BC-3365630DB840.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FactsOnly project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FactsOnly</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>606341114.44010305</real>
+			<key>timeStoppedRecording</key>
+			<real>606341118.06257403</real>
+			<key>title</key>
+			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>039F01AA-93BD-4763-98BC-3365630DB840</string>
+		</dict>
 		<key>FA73D1FF-4326-4DE1-A767-B2F27E988CC8</key>
 		<dict>
 			<key>className</key>

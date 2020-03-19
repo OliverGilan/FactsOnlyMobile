@@ -6,7 +6,7 @@ import {
     View,
     Text,
     StatusBar,
-    RefreshControl
+    RefreshControl,
   } from 'react-native';
 import React from 'react'
 import auth from '@react-native-firebase/auth'
@@ -17,6 +17,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Categories from './tabs/Categories'
 import Saved from './tabs/Saved'
+import Settings from './tabs/SettingsMenu'
 
 import Sports from './categories/Sports'
 import Health from './categories/Health'
@@ -28,8 +29,6 @@ import Fact from './components/Fact'
 import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Report from './components/Report'
-import Menu from './components/Menu'
-import Header from './components/Header'
 
 import CreateFact from './components/CreateFact'
 import EditFact from './components/EditFact'
@@ -81,11 +80,16 @@ export default class App extends React.Component{
             <Stack.Screen name='Saved' component={Saved}/>
             <Stack.Screen name='Fact' component={Fact}/>
             <Stack.Screen name='Report' component={Report}/>
+            <Stack.Screen name='Login' component={Login}/>
+            <Stack.Screen name='SignUp' component={SignUp}/>
         </Stack.Navigator>
     
     createSettingsStack = () => 
-        <Stack.Navigator initialRouteName='Login'>
+        <Stack.Navigator initialRouteName='Settings'>
+            <Stack.Screen name='Settings' component={Settings}/>
             <Stack.Screen name='Login' component={Login}/>
+            <Stack.Screen name='SignUp' component={SignUp}/>
+            <Stack.Screen name='CreateFact' component={CreateFact}/>
         </Stack.Navigator>
 
     render(){
