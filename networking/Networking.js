@@ -159,7 +159,7 @@ export async function isAdmin(){
     }
 }
 
-export async function createPost(headline, body, category){
+export async function createPost(headline, body, category, sources){
     var token = await auth().currentUser.getIdToken()
     const headers={
         Accept: 'application/json',
@@ -169,7 +169,8 @@ export async function createPost(headline, body, category){
     return await Axios.post(link,{
       headline: headline,
       fact: body,
-      category: category
+      category: category,
+      sources: sources
     },{headers:headers}).then(res => {
         if(res.status===200){return true}
         else{return res}

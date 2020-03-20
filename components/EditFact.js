@@ -92,7 +92,7 @@ export default class EditFact extends React.Component{
                     />
                 <Text style={styles.label}>Sources</Text>
                 <TextInput style={styles.textbox}
-                    placeholder="Fact Body here..."
+                    placeholder="Sources here..."
                     onChangeText={(sources) => this.setState({sources})}
                     style={[newStyle]}
                     editable={true}

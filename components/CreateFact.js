@@ -12,6 +12,7 @@ export default class CreateFact extends React.Component{
             headline: '',
             submitted: false,
             category: 'Economy',
+            sources: ''
         }
     }
 
@@ -22,7 +23,8 @@ export default class CreateFact extends React.Component{
     }
 
     submit = () => {
-        createPost(this.state.headline, this.state.body, this.state.category)
+        var sources = this.state.sources.split(',')
+        createPost(this.state.headline, this.state.body, this.state.category, sources)
         .then(res=>{
             if(res === true){
                 this.setState({
@@ -73,6 +75,16 @@ export default class CreateFact extends React.Component{
                     editable={true}
                     multiline={true}
                     value={this.state.body}
+                    onContentSizeChange={(e) => this.updateSize(e.nativeEvent.contentSize.height)}
+                    />
+                <Text style={styles.label}>Sources</Text>
+                <TextInput style={styles.textbox}
+                    placeholder="Sources here..."
+                    onChangeText={(sources) => this.setState({sources})}
+                    style={[newStyle]}
+                    editable={true}
+                    multiline={true}
+                    value={this.state.sources}
                     onContentSizeChange={(e) => this.updateSize(e.nativeEvent.contentSize.height)}
                     />
                 <Text style={styles.label}>Category</Text>
