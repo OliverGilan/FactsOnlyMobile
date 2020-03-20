@@ -6,7 +6,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 import auth from '@react-native-firebase/auth'
 
 
-export default class Economy extends React.Component{
+export default class Politics extends React.Component{
     constructor(props){
         super(props);
         this.state = {

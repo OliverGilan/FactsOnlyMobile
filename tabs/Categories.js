@@ -29,14 +29,6 @@ export default class Categories extends React.Component{
                             style={styles.button}
                             activeOpacity={.65}
                             underlayColor={'lightgray'}
-                            onPress={()=> this.props.navigation.navigate('Health')}
-                            >
-                            <Text style={{color: "black", fontWeight: '700', fontSize: 14}}>Health</Text>
-                        </TouchableHighlight>
-                        <TouchableHighlight
-                            style={styles.button}
-                            activeOpacity={.65}
-                            underlayColor={'lightgray'}
                             onPress={()=> this.props.navigation.navigate('Politics')}
                             >
                             <Text style={{color: "black", fontWeight: '700', fontSize: 14}}>Politics</Text>
@@ -48,6 +40,14 @@ export default class Categories extends React.Component{
                             onPress={()=> this.props.navigation.navigate('Sports')}
                         >
                             <Text style={{color: "black", fontWeight: '700', fontSize: 14}}>Sports</Text>
+                        </TouchableHighlight>
+                        <TouchableHighlight
+                            style={styles.button}
+                            activeOpacity={.65}
+                            underlayColor={'lightgray'}
+                            onPress={()=> this.props.navigation.navigate('World')}
+                            >
+                            <Text style={{color: "black", fontWeight: '700', fontSize: 14}}>World</Text>
                         </TouchableHighlight>
                     </View>
         </ScrollView>

@@ -1,12 +1,12 @@
 import React from 'react'
 import Feed from '../components/Feed'
-import { getHealthFacts } from '../networking/Networking'
+import { getWorldFacts } from '../networking/Networking'
 import {View, Text, StyleSheet, RefreshControl, Alert} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import auth from '@react-native-firebase/auth'
 
 
-export default class Economy extends React.Component{
+export default class World extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -17,7 +17,7 @@ export default class Economy extends React.Component{
     }
 
     componentDidMount(){
-        getHealthFacts().then((response) => {
+        getWorldFacts().then((response) => {
             if(response.error){
                 Alert.alert('Error!', 'It seems you are not authorized to view saved facts...')
                 this.props.navigation.navigate('Feed')
@@ -33,7 +33,7 @@ export default class Economy extends React.Component{
 
     _onRefresh() {
         this.setState({refreshing: true});
-        getHealthFacts().then((response) => {
+        getWorldFacts().then((response) => {
           this.setState({
               facts: response,
               refreshing: false

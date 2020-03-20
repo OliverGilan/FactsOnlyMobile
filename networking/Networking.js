@@ -121,8 +121,8 @@ export async function getEconFacts() {
     .catch(err => console.log(err))
 }
 
-export async function getHealthFacts() {
-    return Axios.get(link+'health')
+export async function getWorldFacts() {
+    return Axios.get(link+'world')
     .then(res => res.data)
     .catch(err => console.log(err))
 }

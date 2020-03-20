@@ -651,7 +651,7 @@
 			baseConfigurationReference = D9DA3B05D90E594FBDC9E96C /* Pods-FactsOnly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = USELJSXLY2;
 				INFOPLIST_FILE = FactsOnly/Info.plist;
@@ -673,7 +673,7 @@
 			baseConfigurationReference = 8826B9ACB183C4468D5D337D /* Pods-FactsOnly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = USELJSXLY2;
 				INFOPLIST_FILE = FactsOnly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

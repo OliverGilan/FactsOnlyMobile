@@ -20,8 +20,8 @@ import Saved from './tabs/Saved'
 import Settings from './tabs/SettingsMenu'
 
 import Sports from './categories/Sports'
-import Health from './categories/Health'
-import Politics from './categories/Poltiics'
+import World from './categories/World'
+import Politics from './categories/Politics'
 import Economy from './categories/Economy'
 
 import Feed from './components/Feed'
@@ -69,7 +69,7 @@ export default class App extends React.Component{
             <Stack.Screen name='Fact' component={Fact}/>
             <Stack.Screen name='Report' component={Report}/>
             <Stack.Screen name='Economy' component={Economy}/>
-            <Stack.Screen name='Health' component={Health}/>
+            <Stack.Screen name='World' component={World}/>
             <Stack.Screen name='Politics' component={Politics}/>
             <Stack.Screen name='Sports' component={Sports}/>
         </Stack.Navigator>

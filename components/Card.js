@@ -7,14 +7,14 @@ export default class Card extends React.Component{
         var cat = this.props.fact.category
         return(
             <View style={styles.card}>
-                <View className="stripe" style={[styles.stripe, 
-                cat==="Politics" ? styles.stripePol : 
-                cat==="Economy" ? styles.stripeEcon : 
-                cat==="Health" ? styles.stripeHealth : 
-                cat==="Sports" ? styles.stripeSports : null]} />
                 <Text style={styles.category}>{this.props.fact.category}</Text>
                 <Text style={styles.headline}>{this.props.fact.headline}</Text>
                 <Text style={styles.date}>{this.props.fact.date}</Text>
+                <View className="stripe" style={[styles.stripe, 
+                cat==="Politics" ? styles.stripePol : 
+                cat==="Economy" ? styles.stripeEcon : 
+                cat==="World" ? styles.stripeWorld : 
+                cat==="Sports" ? styles.stripeSports : null]} />
             </View>
         )
     }
@@ -39,26 +39,26 @@ const styles=StyleSheet.create({
         marginVertical: 5,
     },
     stripe: {
-        backgroundColor: "#4cba54",
+        backgroundColor: "white",
         position: "absolute",
         top: 0,
+        bottom: 0,
         right: 5,
         width: 4,
-        height: 50,
-        borderBottomEndRadius: 5,
-        borderBottomStartRadius: 5,
+        borderBottomEndRadius: 3,
+        borderTopEndRadius: 3,
     },
     stripeEcon:{
-        backgroundColor: "#4cba54",
+        backgroundColor: "#B5EAD7",
     },
     stripePol:{
-        backgroundColor: "#d9c64c",
+        backgroundColor: "#F7F48B",
     },
-    stripeHealth:{
-        backgroundColor: "#b53e3e",
+    stripeWorld:{
+        backgroundColor: "#F47C7C",
     },
     stripeSports:{
-        backgroundColor: "#339ccc",
+        backgroundColor: "#B5E0FA",
     },
     category: {
         alignSelf: "flex-start",

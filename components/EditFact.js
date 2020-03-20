@@ -97,9 +97,9 @@ export default class EditFact extends React.Component{
                     this.setState({category: itemValue})
                 }>
                     <Picker.Item label="Economy" value="Economy" />
-                    <Picker.Item label="Health" value="Health" />
+                    <Picker.Item label="World" value="World" />
                     <Picker.Item label="Politics" value="Politics" />
-                    <Picker.Item label="Sports" value="Sports" />
+                    <Picker.Item label="Sports" value="Sports & Entertainment" />
                 </Picker>
 
                 <View style={styles.button}>
