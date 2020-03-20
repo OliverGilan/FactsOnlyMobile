@@ -7,6 +7,7 @@ import {
     Text,
     StatusBar,
     RefreshControl,
+    Image
   } from 'react-native';
 import React from 'react'
 import auth from '@react-native-firebase/auth'

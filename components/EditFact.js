@@ -14,7 +14,8 @@ export default class EditFact extends React.Component{
             headline: this.props.route.params.fact.headline,
             fid: this.props.route.params.fact.fid,
             date: this.props.route.params.fact.date,
-            submitted: false
+            submitted: false,
+            sources: this.props.route.params.fact.sources ? this.props.route.params.fact.sources.join() : null
         }
     }
 
@@ -25,7 +26,8 @@ export default class EditFact extends React.Component{
     }
 
     submit = () => {
-        editPost(this.state.fid, this.state.date, this.state.headline, this.state.body, this.state.category)
+        var sauce = this.state.sources.split(',')
+        editPost(this.state.fid, this.state.date, this.state.headline, this.state.body, this.state.category, sauce)
         .then(res=>{
             if(res === true){
                 this.setState({
@@ -86,6 +88,16 @@ export default class EditFact extends React.Component{
                     editable={true}
                     multiline={true}
                     value={this.state.body}
+                    onContentSizeChange={(e) => this.updateSize(e.nativeEvent.contentSize.height)}
+                    />
+                <Text style={styles.label}>Sources</Text>
+                <TextInput style={styles.textbox}
+                    placeholder="Fact Body here..."
+                    onChangeText={(sources) => this.setState({sources})}
+                    style={[newStyle]}
+                    editable={true}
+                    multiline={true}
+                    value={this.state.sources}
                     onContentSizeChange={(e) => this.updateSize(e.nativeEvent.contentSize.height)}
                     />
                 <Text style={styles.label}>Category</Text>

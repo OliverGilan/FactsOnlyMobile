@@ -176,7 +176,7 @@ export async function createPost(headline, body, category){
     }).catch(err => err)
 }
 
-export async function editPost(id, date, headline, body, category){
+export async function editPost(id, date, headline, body, category, sources){
     var token = await auth().currentUser.getIdToken()
     const headers={
         Accept: 'application/json',
@@ -184,7 +184,7 @@ export async function editPost(id, date, headline, body, category){
         authorization: `Bearer ${token}`
     }
     return await Axios.post(link + 'editFact',{
-        fact: {body: body, id: id, headline: headline, date: date, category: category}
+        fact: {body: body, id: id, headline: headline, date: date, category: category, sources: sources}
     },{headers:headers}).then(res => {
         if(res.status===200){return true}
         else{return res}

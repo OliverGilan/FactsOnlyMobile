@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>8B430BCD-A758-4A54-AA10-9EF300A09988</key>
+		<key>2C0C7058-0177-49F3-AF26-8F8C5F355C58</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>8B430BCD-A758-4A54-AA10-9EF300A09988.xcactivitylog</string>
+			<string>2C0C7058-0177-49F3-AF26-8F8C5F355C58.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,13 +32,47 @@
 			<key>signature</key>
 			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>606346202.66115904</real>
+			<real>606408691.16866398</real>
 			<key>timeStoppedRecording</key>
-			<real>606346207.48676395</real>
+			<real>606408695.33552504</real>
 			<key>title</key>
 			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>8B430BCD-A758-4A54-AA10-9EF300A09988</string>
+			<string>2C0C7058-0177-49F3-AF26-8F8C5F355C58</string>
+		</dict>
+		<key>DBBC9B57-E7BF-48DA-918E-C673F93453AC</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DBBC9B57-E7BF-48DA-918E-C673F93453AC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FactsOnly project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FactsOnly</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>606411315.01410103</real>
+			<key>timeStoppedRecording</key>
+			<real>606411318.66977501</real>
+			<key>title</key>
+			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>DBBC9B57-E7BF-48DA-918E-C673F93453AC</string>
 		</dict>
 	</dict>
 </dict>

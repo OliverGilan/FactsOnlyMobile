@@ -1,11 +1,13 @@
 import React from 'react'
-import {View, Text, StyleSheet, Alert} from 'react-native'
+import {View, Text, StyleSheet, Alert, Linking, WebView} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { withNavigation } from 'react-navigation'
 import { isSignedIn } from '../networking/Authentication'
 import { checkSaved, saveFact, unsaveFact, deletePost, isAdmin } from '../networking/Networking'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import auth from '@react-native-firebase/auth'
+import {getLinkPreview} from 'link-preview-js';
+
 
 
 export default class Fact extends React.Component{
@@ -15,7 +17,9 @@ export default class Fact extends React.Component{
             fact: this.props.route.params.fact,
             saved: false,
             loading: true,
-            admin: false
+            admin: false,
+            sources: null,
+            hasSource: false,
         }
         this.trySave = this.trySave.bind(this)
         this.componentDidMount = this.componentDidMount.bind(this)
@@ -40,6 +44,15 @@ export default class Fact extends React.Component{
         }else{
             this.setState({
                 loading: false
+            })
+        }
+        if(this.state.fact.sources !== null){
+            var s = []
+            this.state.fact.sources.forEach(element=>getLinkPreview(element).then(data=>s.push(data)))
+            console.log(s)
+            this.setState({
+                sources: s,
+                hasSource: true
             })
         }
     }
@@ -135,6 +148,22 @@ export default class Fact extends React.Component{
                 <Text style={styles.category}>{this.state.fact.category}</Text>
                 <Text style={styles.date}>{this.state.fact.date}</Text>
                 <Text style={styles.body}>{this.state.fact.fact}</Text>
+                {this.state.hasSource && (
+                    <View>
+                        <Text style={styles.readMore}>If you'd like to read more...</Text>
+                        {this.state.sources.map((object, i) =>(
+                            <TouchableOpacity
+                            activeOpacity={.65}
+                            key={i}
+                            onPress={()=>Linking.openURL(object.url)}>
+                                <View style={styles.source}>
+                                    <Text style={styles.sourceTitle}>{object.title}</Text>
+                                    <Text style={styles.sourceName}>{object.siteName}</Text>
+                                </View>
+                            </TouchableOpacity>
+                        ))}
+                    </View>
+                )}
                 <View style={styles.footer}>
                     <TouchableOpacity 
                         activeOpacity={.65} 
@@ -215,5 +244,39 @@ const styles = StyleSheet.create({
     flags:{
         color: "gray",
         padding: 10,
+    },
+    readMore:{
+        width: "100%",
+        fontSize: 20,
+        fontWeight: "500",
+        marginTop: 100,
+        marginBottom: 10
+    },
+    source: {
+        backgroundColor: "#fff",
+        borderRadius: 5,
+        alignItems: 'flex-start',
+        paddingTop: 10,
+        marginHorizontal: 5,
+        paddingHorizontal: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: .5,
+        },
+        shadowOpacity: 0.50,
+        shadowRadius: 1.00,
+        elevation: 1,
+        marginVertical: 5,
+    },
+    sourceTitle: {
+        fontWeight: "500",
+        fontSize: 15,
+        padding: 2
+    },
+    sourceName:{
+        fontSize: 10,
+        fontWeight: "200",
+        padding: 2
     }
 });
