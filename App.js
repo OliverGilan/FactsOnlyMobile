@@ -15,6 +15,7 @@ import auth from '@react-native-firebase/auth'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import Categories from './tabs/Categories'
 import Saved from './tabs/Saved'
@@ -45,7 +46,26 @@ const Stack = createStackNavigator();
 
 export default class App extends React.Component{
     createTabs = () => 
-        <Tabs.Navigator>
+        <Tabs.Navigator
+        screenOptions={({ route }) => ({
+            tabBarIcon: ({ focused, color, size }) => {
+                let iconName;
+    
+                if(route.name=== 'Home'){
+                    iconName = focused ? 'ios-paper' : 'ios-paper'
+                }else if(route.name==='Categories'){
+                    iconName = focused ? 'ios-albums' : 'ios-albums'
+                }else if(route.name==='Saved'){
+                    iconName = focused ? 'ios-bookmark' : 'ios-bookmark'
+                }else if(route.name==='Settings'){
+                    iconName = focused ? 'ios-cog' : 'ios-cog'
+                }
+                return <Ionicons name={iconName} size={size} color={color} />;
+            },
+          })}
+          tabBarOptions={{
+              activeTintColor: 'black'
+          }}>
             <Tabs.Screen name='Home' children={this.createHomeStack}/>
             <Tabs.Screen name='Categories' children={this.createCategoriesStack}/>
             <Tabs.Screen name='Saved' children={this.createSavedStack}/>

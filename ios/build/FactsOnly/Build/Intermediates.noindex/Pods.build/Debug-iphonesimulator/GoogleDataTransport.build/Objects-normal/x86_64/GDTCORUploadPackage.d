@@ -4,10 +4,6 @@ dependencies: \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORTargets.h \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORClock.h \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORConsoleLogger.h \
-  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORStoredEvent.h \
-  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORDataFuture.h \
-  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCOREvent.h \
-  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCOREventDataObject.h \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORStorage_Private.h \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORStorage.h \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORLifecycle.h \
@@ -15,5 +11,7 @@ dependencies: \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORUploadCoordinator.h \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORRegistrar.h \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORPrioritizer.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCOREvent.h \
+  /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCOREventDataObject.h \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORUploader.h \
   /Users/olivergilan/Documents/FactsOnly/Mobile/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORUploadPackage_Private.h

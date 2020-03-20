@@ -101,7 +101,7 @@ export default class SettingsMenue extends React.Component{
 const styles = StyleSheet.create({
     button:{
         padding: 20,
-        borderBottomColor: 'black',
-        borderBottomWidth: .25
+        // borderBottomColor: 'black',
+        // borderBottomWidth: .25
     }
 })
