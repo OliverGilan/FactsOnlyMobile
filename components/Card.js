@@ -14,7 +14,7 @@ export default class Card extends React.Component{
                 cat==="Politics" ? styles.stripePol : 
                 cat==="Economy" ? styles.stripeEcon : 
                 cat==="World" ? styles.stripeWorld : 
-                cat==="Sports" ? styles.stripeSports : null]} />
+                cat==="Sports & Entertainment" ? styles.stripeSports : null]} />
             </View>
         )
     }

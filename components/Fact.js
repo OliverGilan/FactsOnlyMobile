@@ -46,7 +46,7 @@ export default class Fact extends React.Component{
                 loading: false
             })
         }
-        if(this.state.fact.sources !== null){
+        if(this.state.fact.sources !== null && this.state.fact.sources[0]!==""){
             var s = []
             this.state.fact.sources.forEach(element=>getLinkPreview(element).then(data=>s.push(data)))
             console.log(s)
