@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>3534A823-D47A-4721-BD14-75FE9C2FB4E0</key>
+		<key>2297840F-1746-424E-9B16-06D1740A4A01</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>3534A823-D47A-4721-BD14-75FE9C2FB4E0.xcactivitylog</string>
+			<string>2297840F-1746-424E-9B16-06D1740A4A01.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>606426216.52413595</real>
+			<real>606434212.17515004</real>
 			<key>timeStoppedRecording</key>
-			<real>606426221.75868297</real>
+			<real>606434228.67878306</real>
 			<key>title</key>
 			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>3534A823-D47A-4721-BD14-75FE9C2FB4E0</string>
+			<string>2297840F-1746-424E-9B16-06D1740A4A01</string>
 		</dict>
-		<key>CF9CFA16-AFE8-48B4-9CA1-1895D4C91066</key>
+		<key>7E9A7396-9C11-437E-B3C1-D2BB1F421CC1</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>CF9CFA16-AFE8-48B4-9CA1-1895D4C91066.xcactivitylog</string>
+			<string>7E9A7396-9C11-437E-B3C1-D2BB1F421CC1.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,13 +66,13 @@
 			<key>signature</key>
 			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>606425386.89830899</real>
+			<real>606444955.92032897</real>
 			<key>timeStoppedRecording</key>
-			<real>606425413.34158802</real>
+			<real>606444959.95838499</real>
 			<key>title</key>
 			<string>Building workspace FactsOnly with scheme FactsOnly and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>CF9CFA16-AFE8-48B4-9CA1-1895D4C91066</string>
+			<string>7E9A7396-9C11-437E-B3C1-D2BB1F421CC1</string>
 		</dict>
 	</dict>
 </dict>

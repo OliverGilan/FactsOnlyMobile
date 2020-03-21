@@ -1,13 +1,11 @@
 import React from 'react'
 import {View, Text, StyleSheet, Alert, Linking, WebView} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
-import { withNavigation } from 'react-navigation'
 import { isSignedIn } from '../networking/Authentication'
 import { checkSaved, saveFact, unsaveFact, deletePost, isAdmin } from '../networking/Networking'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import auth from '@react-native-firebase/auth'
 import {getLinkPreview} from 'link-preview-js';
-
 
 
 export default class Fact extends React.Component{
@@ -18,19 +16,19 @@ export default class Fact extends React.Component{
             saved: false,
             loading: true,
             admin: false,
-            sources: null,
+            sources: [],
             hasSource: false,
         }
         this.trySave = this.trySave.bind(this)
         this.componentDidMount = this.componentDidMount.bind(this)
         this.update = this.update.bind(this)
+        this._onRefresh=this._onRefresh.bind(this)
     }
 
     componentDidMount(){
         if(isSignedIn()){
             var uid = auth().currentUser.uid
             checkSaved(uid, this.state.fact.fid).then((result) => {
-                // console.log(result)
                 this.setState({
                     saved: result.saved,
                     loading: false
@@ -46,13 +44,23 @@ export default class Fact extends React.Component{
                 loading: false
             })
         }
+        this._onRefresh()
+    }
+
+    _onRefresh() {
+        console.log("refresh")
         if(this.state.fact.sources !== null && this.state.fact.sources[0]!==""){
             var s = []
-            this.state.fact.sources.forEach(element=>getLinkPreview(element).then(data=>s.push(data)))
-            console.log(s)
-            this.setState({
-                sources: s,
-                hasSource: true
+            var link = this.state.fact.sources
+            link.forEach(link => {
+                getLinkPreview(link)
+                .then(data => {
+                    s.push(data)
+                    this.setState({
+                        sources: s,
+                        hasSource: true,
+                    })
+                })
             })
         }
     }
