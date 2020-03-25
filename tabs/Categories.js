@@ -39,7 +39,7 @@ export default class Categories extends React.Component{
                             underlayColor={'lightgray'}
                             onPress={()=> this.props.navigation.navigate('Sports')}
                         >
-                            <Text style={{color: "black", fontWeight: '700', fontSize: 14}}>Sports</Text>
+                            <Text style={{color: "black", fontWeight: '700', fontSize: 14}}>Sports & Entertainment</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
                             style={styles.button}
