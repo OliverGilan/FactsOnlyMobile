@@ -55,6 +55,9 @@ export default class Fact extends React.Component{
             link.forEach(link => {
                 getLinkPreview(link)
                 .then(data => {
+                    if(data.siteName === undefined){
+                        data.siteName = link.split('/')[2]
+                    }
                     s.push(data)
                     this.setState({
                         sources: s,
