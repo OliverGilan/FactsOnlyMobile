@@ -1,4 +1,5 @@
 node_modules/
-ios/Pods/*
-ios/build/*
+ios/Pods/
+ios/Podfile.lock
+ios/build/
 EV.js
